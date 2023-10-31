@@ -1,0 +1,12 @@
+1. Added background image
+2. Added background music
+3. Can control at which angle the ball is reflected
+4. Ball gets faster the more bricks are destroyed
+5. Paddle gets smaller the more bricks are destroyed
+6. Added point counter
+7. Added bounce, win, loss sound effects
+8. Added more settings to tweak with global variables such as minimum and maximum ball speed and etc.
+9. Points depend which color brick you hit
+10. Loses 5000 points if you lose a ball
+
+Notes: would've added multiple balls if allowed to make seperate ball class and matrices.
