@@ -1,0 +1,7 @@
+# Lint
+black
+flake8
+isort
+
+# Prod
+typer

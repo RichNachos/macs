@@ -1,0 +1,8 @@
+a0aca0aca0a0a0acaca0a0a0aacb0acba011ac1ab1a0b
+5 3 8
+0 2 4
+2 a 1 a 3 
+1 0 2 
+2 a 1 a 3 
+1 c 4 
+2 a 1 a 3 
