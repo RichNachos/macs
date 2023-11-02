@@ -1,0 +1,5 @@
+array[3000]
+qveshmiwerit gamravleba on 1-1000 numbers
+*1, *2, *3, ... , *1000
+save only 1 digit in each array element
+if two digit number is in element, % 10 and add it to the next element

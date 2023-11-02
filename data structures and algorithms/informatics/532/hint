@@ -1,0 +1,4 @@
+save not as 5 7 3 8 10
+but as      5 5 3 3 3
+write minimum when user inputs numbers instead of real number which is higher than minimmum
+if new number is lower than minimum then save that new number and set is as new minimum

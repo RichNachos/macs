@@ -1,0 +1,3 @@
+sort all elements
+save input as sorted fragments that do not have same elements in each fragment
+answer is total amount of pairs - amount of sorted fragments

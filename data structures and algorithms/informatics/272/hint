@@ -1,0 +1,3 @@
+use brute force
+sum up all weights and calculate which cow is best suited for that (weight - his weight)
+do the same for all other cows until cows left is 0

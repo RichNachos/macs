@@ -1,0 +1,3 @@
+you solved this btw
+sort the input array
+sum += abs(a[i] - (i + 1)) // or start indexing from 1 for cleaner code

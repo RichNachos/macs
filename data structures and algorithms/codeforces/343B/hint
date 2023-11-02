@@ -1,0 +1,4 @@
+save in stack
+if two same symbols are added into stack then remove those symbols
+if at the end stack has 0 symbols answer is YES
+if stack is not empty answer is NO

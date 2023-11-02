@@ -1,0 +1,4 @@
+if vertices != edges -> NO
+else check if graph is bmuli (all vertices have a path to all other vertices)
+if not BMULI THEN PRINT NO
+else PRINT YES

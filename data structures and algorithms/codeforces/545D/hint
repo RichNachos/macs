@@ -1,0 +1,3 @@
+sort the input array
+if one value is dissapointed then we dont care about it
+count how many we dont care about and calculate answer

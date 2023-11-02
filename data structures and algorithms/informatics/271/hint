@@ -1,0 +1,5 @@
+solved by using stack
+count the number of times height decreases in coordinates
+put 0 in stack
+put new height if it is bigger than previous height
+ans++ if new height is lower than previous height // looped on all saved heights that are higher than new height

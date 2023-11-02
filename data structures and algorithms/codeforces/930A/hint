@@ -1,0 +1,3 @@
+see vertices as time needed to reach the root
+if on that level the count of apples is 1 then ans++ else ans stays the same
+do same for all levels

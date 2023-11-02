@@ -1,0 +1,5 @@
+split coordinates into two numbers
+(1 7) -> (1) (7)
+add starting point to coordinate numbers -> (1 1) & (7 1)
+save these two points seperately and sort them in two seperate arrays
+...

@@ -1,0 +1,5 @@
+sort the fragments individually and check if the end result array is sorted
+
+OR
+
+calculate maximum for each fragment individually and check if those maximums are sorted

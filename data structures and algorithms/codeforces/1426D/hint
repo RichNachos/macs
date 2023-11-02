@@ -1,0 +1,2 @@
+put input prefix sums into set
+if set already contains entered number ans++ and set = new set() and prefix_sum = 0
