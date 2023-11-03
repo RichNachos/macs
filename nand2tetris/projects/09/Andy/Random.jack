@@ -1,0 +1,12 @@
+class Random {
+    static int seed;
+    
+    function int rand() {
+        /** return a random number in the range 0..32767 */
+        let seed = seed + 17594;
+        if (seed < 0) {
+            let seed = seed - 32767 - 1;
+        }
+        return seed;
+    }
+}

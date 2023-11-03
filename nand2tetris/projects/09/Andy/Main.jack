@@ -1,0 +1,47 @@
+// HW09: Andy H.J. Ant
+
+
+class Main {
+    // Main program
+    function void main() {
+        var bool running;
+        var String input;
+        var Andy andy;
+        var Array steps;
+        var int curr_simulation, i;
+
+        let curr_simulation = 0;
+        let steps = Array.new(100);
+        let andy = Andy.new(0,0,0);
+
+        do Output.printString("Hold space to pause simulation and press 'R' to start the simulation");
+        do Output.println();
+        let input = Keyboard.readLine("Press enter to start first simulation: ");
+        do input.dispose();
+        do Screen.clearScreen();
+        do Output.moveCursor(0,0);
+        let running = true;
+        
+        while (true) {
+            let andy = Andy.new(0,0,0);
+            do andy.start();
+            // Andy receives 'R' and halts itself (should log steps now)
+            do Screen.clearScreen();
+            do Output.moveCursor(0,0);
+            let steps[curr_simulation] = andy.getSteps();
+            let curr_simulation = curr_simulation + 1;
+            do andy.dispose();
+
+            let i = 0;
+            while (i < curr_simulation) {
+                do Output.printString("Simulation ");
+                do Output.printInt(i + 1);
+                do Output.printString(" steps: ");
+                do Output.printInt(steps[i]);
+                do Output.println();
+                let i = i + 1;
+            }
+        }
+        return;
+    }
+}

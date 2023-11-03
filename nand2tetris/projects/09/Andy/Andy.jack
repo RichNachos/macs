@@ -1,0 +1,160 @@
+class Andy {
+
+    // Fields
+    field int x, y, direction, steps;
+
+    // Constructor
+    constructor Andy new(int initialX, int initialY, int initialDirection) {
+        let x = initialX;
+        let y = initialY;
+        let direction = initialDirection;
+        let steps = 0;  // initialize steps to 0
+        return this;
+    }
+
+    // Methods
+    method void move() {
+        // Determine current pixel color
+        var int newDirection, dx, dy, newx, newy;
+        var bool pixelColor;
+        let pixelColor = Andy.getPixelColor(x, y);
+
+        // Flip current pixel color
+        do Screen.setColor(~pixelColor);
+        do Screen.drawPixel(x, y);
+
+        // Change direction and move forward based on current pixel color
+        if (pixelColor = 0) {  // white
+            let newDirection = direction + 1;
+            if (newDirection > 3) {
+                let newDirection = newDirection - 4;
+            }
+            let direction = newDirection;
+        } else {  // black
+            let newDirection = direction - 1;
+            if (newDirection < 0) {
+                let newDirection = 3;
+            }
+            let direction = newDirection;
+        }
+        let steps = steps + 1;
+        let dx = 0;
+        let dy = 0;
+        if (direction = 0) {
+            let dy = -1;
+        }
+        if (direction = 1) {
+            let dx = 1;
+        }
+        if (direction = 2) {
+            let dy = 1;
+        }
+        if (direction = 3) {
+            let dx = -1;
+        }
+        let newx = x + dx;
+        let newy = y + dy;
+        if (newx < 0) {
+            let newx = 512 - 1;
+        }
+        if (~(newx < 512)) {
+            let newx = 0;
+        }
+        if (newy < 0) {
+            let newy = 256 - 1;
+        }
+        if (~(newy < 256)) {
+            let newy = 0;
+        }
+        let x = newx;
+        let y = newy;
+        return;
+    }
+    
+    method void start() {
+        var int randomX, randomY, randomDirection, initialX, initialY, initialDirection;
+        var String input, restart;
+        let restart = "R";
+
+        let input = Keyboard.readInt("Enter initial x coordinate (or press ENTER for random): ");
+        if (input = 0) {
+            let randomX = Random.rand() / 64;
+            let initialX = randomX;
+            do Output.printString("Initial x coordinate: ");
+            do Output.printInt(randomX);
+            do Output.println();
+        } else {
+            let initialX = input;
+        }
+        let input = Keyboard.readInt("Enter initial y coordinate (or press ENTER for random): ");
+        if (input = 0) {
+            let randomY = Random.rand() / 128;
+            let initialY = randomY;
+            do Output.printString("Initial y coordinate: ");
+            do Output.printInt(randomY);
+            do Output.println();
+        } else {
+            let initialY = input;
+        }
+        let input = Keyboard.readInt("Enter initial direction (0 = up, 1 = right, 2 = down, 3 = left): ");
+        if (input = 0) {
+            let randomDirection = Random.rand() / 8192;
+            let initialDirection = randomDirection;
+            do Output.printString("Initial direction: ");
+            do Output.printInt(randomDirection);
+            do Output.println();
+        } else {    
+            let initialDirection = input;
+        }
+        do Screen.clearScreen();
+        let x = initialX;
+        let y = initialY;
+        let direction = initialDirection;
+
+
+        while (true) {
+            let input = Keyboard.keyPressed();
+            if (input = 82) {
+                do Sys.wait(400);
+                return;
+            }
+            if (input = 0) {    
+                do move();
+            }
+        }
+        return;
+    }
+
+    method int getSteps() {
+        return steps;
+    }
+
+    function bool getPixelColor(int x, int y) {
+        var int value;
+        var int address;
+        var int mask;
+
+        let address = 16384 + (y*32) + (x/16);
+        let value = Memory.peek(address);
+        let mask = Andy.two_pow(x & 15);
+        if (value & mask = 0) {
+            return false;
+        }
+        return true;
+    }
+
+    function int two_pow(int power) {
+        var int val, i;
+        let val = 1;
+        while (i < power) {
+            let val = val * 2;
+            let i = i + 1;
+        }
+        return val;
+    }
+
+    method void dispose() {
+      do Memory.deAlloc(this);
+      return;
+   }
+}

@@ -1,0 +1,20 @@
+function Random.rand 0
+push static 0
+push constant 17594
+add
+pop static 0
+push static 0
+push constant 0
+lt
+if-goto IF_TRUE0
+goto IF_FALSE0
+label IF_TRUE0
+push static 0
+push constant 32767
+sub
+push constant 1
+sub
+pop static 0
+label IF_FALSE0
+push static 0
+return
