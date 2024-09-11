@@ -1,0 +1,10 @@
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-uncased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[34m[1mwandb[39m[22m: [33mWARNING[39m The `run_name` is currently set to the same value as `TrainingArguments.output_dir`. If this was not intended, please specify a different run name by setting the `TrainingArguments.run_name` parameter.
+/opt/conda/lib/python3.10/site-packages/torch/nn/parallel/_functions.py:68: UserWarning: Was asked to gather along dimension 0, but all input tensors were scalars; will instead unsqueeze and return a vector.
+  warnings.warn('Was asked to gather along dimension 0, but all '
+{'eval_loss': 0.09831658750772476, 'eval_runtime': 9.9862, 'eval_samples_per_second': 64.389, 'eval_steps_per_second': 0.601, 'epoch': 3.0}
+The predicted category for the article is: Technology
+The predicted category for the article is: Business
+The predicted category for the article is: Politics
+The predicted category for the article is: Technology

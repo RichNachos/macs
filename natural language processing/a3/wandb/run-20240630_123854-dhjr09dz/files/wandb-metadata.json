@@ -1,0 +1,54 @@
+{
+    "os": "Linux-5.15.133+-x86_64-with-glibc2.31",
+    "python": "3.10.13",
+    "heartbeatAt": "2024-06-30T12:38:54.667569",
+    "startedAt": "2024-06-30T12:38:54.213178",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "kaggle.ipynb",
+    "codePathLocal": null,
+    "root": "/kaggle/working",
+    "host": "8cf7b5cc56ef",
+    "username": "root",
+    "executable": "/opt/conda/bin/python3.10",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2199.998,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 8062.387607574463,
+            "used": 5689.445835113525
+        }
+    },
+    "memory": {
+        "total": 31.357563018798828
+    }
+}
