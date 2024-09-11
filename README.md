@@ -36,4 +36,4 @@ Welcome to my GitHub repository, where I store my academic assignments and proje
 #### [Natural Language Processing](/natural%20language%20processing/)
 #### [Machine Learning](/machine%20learning/)
 #### [Bioinformatics](/bioinformatics/)
-#### Bachelors
+#### Bachelors (Soon)
